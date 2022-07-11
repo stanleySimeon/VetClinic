@@ -2,7 +2,6 @@
 
 > In this project, I will use a relational database to create the initial data structure for a vet clinic. I will create a table to store animals'' information, insert some data into it, and query it.
 
-
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
