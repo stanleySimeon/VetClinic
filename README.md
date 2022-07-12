@@ -6,10 +6,10 @@
 
 This repository includes files with plain SQL that can be used to recreate a database:
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
-- 
+- [schema.sql](./schema.sql)  where I created all tables.
+- [data.sql](./data.sql) to populate tables with sample data.
+- [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. 
+
 <img width="705" alt="Screen Shot 2022-07-11 at 19 07 24" src="https://user-images.githubusercontent.com/91237525/178329833-b85227dc-ea82-406b-b789-6d3e913a18e5.png">
 
 
