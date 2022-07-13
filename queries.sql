@@ -94,3 +94,39 @@ WHERE date_of_birth
 BETWEEN '1990-01-01' 
 AND '2000-12-31' 
 GROUP BY species;
+
+-- Write queries (using JOIN) to answer the following questions
+-- Write query for animals belong to Melody Pond.
+SELECT * FROM animals
+JOIN owners ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Melody Pond';
+
+-- List of all animals that are pokemon (their type is Pokemon).
+SELECT * FROM animals
+JOIN species ON animals.species_id = species.id
+WHERE species.name = 'Pokemon';
+
+-- List of all owners and their animals.
+SELECT owners.full_name, animals.name FROM owners
+LEFT JOIN animals ON owners.id = animals.owner_id;
+
+-- List of animals are there per species
+SELECT species.name, COUNT(*) FROM animals
+JOIN species ON animals.species_id = species.id
+GROUP BY species.name;
+
+-- List all Digimon owned by Jennifer Orwell.
+SELECT * FROM animals
+JOIN owners ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Jennifer Orwell';
+
+-- List all animals owned by Dean Winchester that haven't tried to escape.
+SELECT * FROM animals
+JOIN owners ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Dean Winchester' AND animals.escape_attempts < 0;
+
+-- List of person Who owns the most animals
+SELECT owners.full_name, COUNT(*) FROM owners
+LEFT JOIN animals ON owners.id = animals.owner_id
+GROUP BY owners.full_name ORDER BY COUNT(*) DESC;
+
